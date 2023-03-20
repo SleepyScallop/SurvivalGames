@@ -1,0 +1,20 @@
+game-size: 1
+plugin-prefix: "SG"
+game-name: "Survival Games"
+game-world: world
+game-location:
+  ==: org.bukkit.Location
+  world: world
+  x: 103
+  y: 69
+  z: 131
+  pitch: 0.1
+  yaw: 0.1
+spawn-location:
+  ==: org.bukkit.Location
+  world: world
+  x: 100
+  y: 70
+  z: 100
+  pitch: 0.1
+  yaw: 0.1

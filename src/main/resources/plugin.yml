@@ -1,0 +1,9 @@
+name: SurvivalGames
+version: '${project.version}'
+main: org.sleepy.survivalgames.SurvivalGames
+api-version: 1.19
+
+commands:
+  sg:
+    default: op
+    permission: sg.play
