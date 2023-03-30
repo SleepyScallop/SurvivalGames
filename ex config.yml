@@ -1,0 +1,141 @@
+# The prefix shown when messages from the plugin are sent
+pluginPrefix: "SG"
+
+# The name of the game used for messages from the plugin
+gameName: "Survival Games"
+
+# The world where the game takes place, the game will not work elsewhere
+gameWorld: world
+
+Locations:
+    # Where to send the player for the first time joining?
+    firstSpawnLocation:
+      ==: org.bukkit.Location
+      world: world
+      x: 100
+      y: 70
+      z: 100
+      pitch: 0.1
+      yaw: 0.1
+
+    # Where to send the player when they die?
+    playerRespawnLocation
+      ==: org.bukkit.Location
+      world: world
+      x: 103
+      y: 69
+      z: 131
+      pitch: 0.1
+      yaw: 0.1
+
+    # Where is the location of the game to send the players?
+    gameLocation:
+      ==: org.bukkit.Location
+      world: world
+      x: 103
+      y: 69
+      z: 131
+      pitch: 0.1
+      yaw: 0.1
+
+Triggers:
+    # How many players are needed to start the game?
+    gameRequired: 2
+    
+    # What is the max amount of players the game can handle?
+    gameMax: 5
+
+    # If a player leaves or dies in any way should we remove them from the game?
+    removeLeftPlayer: true
+
+    # How long should we wait before starting the game?
+    startTeleportDelay: 30
+
+    # How long should we wait before teleporting the winner back to playerRespawnLocation
+    winnerTeleportDelay: 10
+
+    # What color should the explosion of the winner firework be?
+    winnerFireworkColor: Maroon
+
+    # What color should the trail of the winner firework be?
+    winnerFireworkTrailColor: Green
+
+    # How long should we disable pvp events for when the game starts?
+    pvpDisabledTimer: 60
+
+    # How long should we freeze the players when the game starts?
+    freezePlayerTimer: 30
+    
+    # Should we clear the players inventory when they teleport to the spawn area?
+    clearPlayerInventory: true
+    
+    # Should we teleport the last 2 players to the game location with a random offset?
+    lastDueTeleport: true
+    
+Currency:
+    # How much money should a player get for winning the game?
+    winnerPot: 1000
+    
+    # How much money should a player get for placing second in the game?
+    runnerUpPot: 500
+    
+    # How much money should a player get for placing anything after second place?
+    participantPot: 200
+    
+Leaderboard:
+    # How often should we update the leaderboard of shards?
+    shardUpdateInterval: 60
+    
+Messages:
+    # Sent the first time the player joins the minigame world
+    firstJoinMessage: "Welcome to the gameworld for Survival Games!"
+
+    # Sent after the second time the player joins
+    joinMessage: "Welcome back to Survival Games!"
+    
+    # What message should we send to players when the game is ready to begin?
+    gameReadyMessage: "Teleporting to the game in 30 seconds, make sure you have selected your loadout!"
+    
+    # What message should we sent players when the game gets cancelled due to someone leaving?
+    gameUnReadyMessage: "Waiting for more players to join..."
+
+    # What message should be sent to the player when they are teleported to the game?
+    gameTeleportMessage: "You have been teleported, you will be unfrozen in 30 seconds!"
+
+    # What message should be sent to the player when the game begins?
+    gameBeginMessage:
+    - "You have been unfrozen, start looting and gear up for the fight!"
+    - "PvP is enabled in 30 seconds!"
+
+    # What message should be sent to the player when pvp is enabled?
+    pvpEnableMessage: "PvP has been enabled... The fight begins!"
+
+    # What message should be sent to the player when they die?
+    playerDiedMessage: "You have died and will now be returned to spawn."
+
+    # What message should be sent to the last 2 players alive?
+    # This only executes if lastDuoTeleport is set to true.
+    lastDuoMessage: "You are one of the last two players alive, teleporting to 1v1 in 60 seconds!"
+
+    # What message should be sent to the winner of the game?
+    winnerMessage: 
+    - "You have won Survival Games!"
+    - "Teleporting back to spawn shortly..."
+
+    # What message should be sent when the player types a command with no parameters?
+    baseCommandMesssage: "Usage: /sg join/leave/about"
+
+    # What message should be sent when a player tries to join the queue twice in a row without leaving
+    alreadyInQueueMessage: "You have already joined the queue for the game!"
+
+    # What message should be sent to the player when they join the queue for the game?
+    joinedQueueMessage: "You have joined the queue for the game."
+
+    # What message should be sent to the player if they try to leave the queue and arent in a game?
+    leaveQueueErrorMessage: "You are not currently in the queue for a game!"
+
+    # What message should be sent to the player when the leave the queue for the game?
+    leaveQueueMessage: "You have left the queue for the game."
+
+    # What message should be shown when players attempt to use the game's commands while it is in progress?
+    gameInProgressMessage: "Game in progress, please wait until it is completed..."
