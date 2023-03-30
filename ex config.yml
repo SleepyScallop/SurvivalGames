@@ -19,7 +19,7 @@ Locations:
       yaw: 0.1
 
     # Where to send the player when they die?
-    playerRespawnLocation
+    playerRespawnLocation:
       ==: org.bukkit.Location
       world: world
       x: 103
